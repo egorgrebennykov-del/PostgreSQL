@@ -1,0 +1,8 @@
+CREATE TABLE minions_birthdays (
+	id INT UNIQUE NOT NULL,
+	name VARCHAR(50) NOT NULL,
+	date_of_birth DATE NOT NULL,
+	age INT CHECK (age >= 0),
+	present VARCHAR(100) DEFAULT 'No present',
+	party TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
